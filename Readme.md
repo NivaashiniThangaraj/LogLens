@@ -1,4 +1,4 @@
-### ⚡ AI-Enabled Debug Prioritization: LOGLENS
+# ⚡ AI-Enabled Debug Prioritization: LOGLENS
 
 An intelligent log analysis and targeted reproduction dashboard for SystemVerilog/UVM ASIC Verification. Bridging the gap between raw text logs and targeted waveform reproduction to transform how verification engineers isolate hardware bugs.
 
@@ -28,7 +28,7 @@ LogLens automatically parses UVM/EDA logs, maps the chronological dependency of 
 
 ## 💻 Technology Stack & Architecture
 
-# React Frontend Architecture:
+### React Frontend Architecture:
 
 The frontend is a single-page React application (built with Vite) engineered for high performance and visual clarity. It does not rely on heavy third-party charting libraries; instead, it uses custom, math-driven SVG rendering to ensure the dependency graphs load instantly.
 
@@ -42,7 +42,7 @@ Targeted Command UI: A sleek interface to copy the exact generated simulator com
 
 Styling & Icons: Utilizes highly customized CSS-in-JS for state-driven styling (glowing nodes, active dependency paths) and lucide-react for clean typography and iconography.
 
-# Backend Technology Stack:
+### Backend Technology Stack:
 
 Python 3: Core data parsing and algorithm execution.
 
@@ -64,7 +64,7 @@ Improves Handoff: Provides a clean, visual proof-of-failure that verification en
 
 ## 🚀 Getting Started
 
-# Prerequisites
+### Prerequisites
 
 Node.js (v16+)
 
