@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Python environments
+venv/
+.venv/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
