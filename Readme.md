@@ -1,8 +1,8 @@
-⚡ AI-Enabled Debug Prioritization: LOGLENS
+### ⚡ AI-Enabled Debug Prioritization: LOGLENS
 
 An intelligent log analysis and targeted reproduction dashboard for SystemVerilog/UVM ASIC Verification. Bridging the gap between raw text logs and targeted waveform reproduction to transform how verification engineers isolate hardware bugs.
 
-📖 The Problem: 
+## 📖 The Problem: 
 
 "The Global Waveform Dilemma" Problem: In modern semiconductor design, verifying a System-on-Chip (SoC) involves running thousands of randomized tests overnight. When a test fails, engineers face two major bottlenecks:
 
@@ -10,11 +10,11 @@ The "Needle in a Haystack" Log Problem: Engineers must manually read through 10,
 
 The "Global Waveform" Compute Bottleneck: Because finding the exact hierarchical path of a bug is difficult, engineers often turn on waveform dumping (VCD/FSDB) for the entire chip to reproduce the error. This slows down simulation speeds by 10x to 50x, wastes server memory, and generates laggy, gigabyte-sized debug files.
 
-🎯 Our Solution
+## 🎯 Our Solution
 
 LogLens automatically parses UVM/EDA logs, maps the chronological dependency of the failures, identifies the exact root cause module, and generates a Targeted Reproduction Command. By injecting targeted verbosity flags (e.g., +uvm_set_verbosity), engineers can re-run simulations at full speed and dump waveforms only for the specific module that failed.
 
-✨ Core Features
+## ✨ Core Features
 
  Intelligent Log Extraction: Parses raw EDA terminal logs to extract dynamic runtime data, including failing UVM components, SVA assertions, test names, and randomized seeds.
 
@@ -26,9 +26,9 @@ LogLens automatically parses UVM/EDA logs, maps the chronological dependency of 
 
  Interactive Verification Engine: An "Engineer-in-the-Loop" UI that allows the user to cross-reference the AI's predicted root cause with the resulting waveform, verify the exact match, and definitively close the debug loop.
 
-💻 Technology Stack & Architecture
+## 💻 Technology Stack & Architecture
 
-## React Frontend Architecture:
+# React Frontend Architecture:
 
 The frontend is a single-page React application (built with Vite) engineered for high performance and visual clarity. It does not rely on heavy third-party charting libraries; instead, it uses custom, math-driven SVG rendering to ensure the dependency graphs load instantly.
 
@@ -42,7 +42,7 @@ Targeted Command UI: A sleek interface to copy the exact generated simulator com
 
 Styling & Icons: Utilizes highly customized CSS-in-JS for state-driven styling (glowing nodes, active dependency paths) and lucide-react for clean typography and iconography.
 
-## Backend Technology Stack:
+# Backend Technology Stack:
 
 Python 3: Core data parsing and algorithm execution.
 
@@ -50,11 +50,11 @@ FastAPI & Uvicorn: High-performance REST API architecture to handle log uploads 
 
 Regex Engine (re): Multi-pattern string matching designed to extract UVM_TESTNAME, random seeds, and hierarchical component paths from unstructured simulator text.
 
-🎯 Target Domain
+## 🎯 Target Domain
 
 SystemVerilog & UVM 1.2: The industry-standard hardware verification language and methodology.
 
-📈 Business Impact & ROI
+## 📈 Business Impact & ROI
 
 Reduces Debugging Time: Cuts the time spent isolating a bug from hours to minutes.
 
@@ -62,9 +62,9 @@ Optimizes Compute Resources: Eliminates the need for global waveform dumps, savi
 
 Improves Handoff: Provides a clean, visual proof-of-failure that verification engineers can easily hand off to RTL designers for fixing.
 
-🚀 Getting Started
+## 🚀 Getting Started
 
-Prerequisites
+# Prerequisites
 
 Node.js (v16+)
 
@@ -94,7 +94,7 @@ npm install
 npm run dev
 
 
-🖥️ Usage Workflow
+## 🖥️ Usage Workflow
 
 The tool is designed to seamlessly integrate into a Verification Engineer's daily debug routine:
 
@@ -112,7 +112,7 @@ Dump Targeted Waveforms: Paste the copied command into your Linux terminal or ED
 
 Verify and Close: Open the waveform in Verdi or EPWave, visually confirm the logic bug (e.g., XX data or missing ack), return to the React dashboard, and click "Verify Match" to lock the graph to a 100% verified state.
 
-🔮 Future Scope
+## 🔮 Future Scope
 
 To scale this prototype into an enterprise-grade EDA tool, the following features are mapped for future development:
 
