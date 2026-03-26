@@ -76,10 +76,10 @@ An EDA Environment (Local Linux Simulator or EDA Playground)
 
 Navigate to your backend directory:
 
-# Install required Python packages
+#### Install required Python packages
 pip install fastapi uvicorn pydantic python-multipart
 
-# Start the FastAPI server on localhost:8000
+#### Start the FastAPI server on localhost:8000
 uvicorn main:app --reload --port 8000
 
 
@@ -87,10 +87,10 @@ uvicorn main:app --reload --port 8000
 
 Navigate to your frontend directory:
 
-# Install Node dependencies
+#### Install Node dependencies
 npm install
 
-# Start the Vite development server
+#### Start the Vite development server
 npm run dev
 
 
