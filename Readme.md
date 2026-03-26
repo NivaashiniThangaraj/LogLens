@@ -1,10 +1,10 @@
-⚡ AI-Enabled Debug Prioritization (Debug AI)
+⚡ AI-Enabled Debug Prioritization: LOGLENS
 
 An intelligent log analysis and targeted reproduction dashboard for SystemVerilog/UVM ASIC Verification. Bridging the gap between raw text logs and targeted waveform reproduction to transform how verification engineers isolate hardware bugs.
 
-📖 The Problem: "The Global Waveform Dilemma"
+📖 The Problem: 
 
-In modern semiconductor design, verifying a System-on-Chip (SoC) involves running thousands of randomized tests overnight. When a test fails, engineers face two major bottlenecks:
+"The Global Waveform Dilemma" Problem: In modern semiconductor design, verifying a System-on-Chip (SoC) involves running thousands of randomized tests overnight. When a test fails, engineers face two major bottlenecks:
 
 The "Needle in a Haystack" Log Problem: Engineers must manually read through 10,000+ line text logs to find the exact UVM_ERROR, UVM_FATAL, or SVA_FAILURE that caused the crash.
 
@@ -12,23 +12,23 @@ The "Global Waveform" Compute Bottleneck: Because finding the exact hierarchical
 
 🎯 Our Solution
 
-Debug AI automatically parses UVM/EDA logs, maps the chronological dependency of the failures, identifies the exact root cause module, and generates a Targeted Reproduction Command. By injecting targeted verbosity flags (e.g., +uvm_set_verbosity), engineers can re-run simulations at full speed and dump waveforms only for the specific module that failed.
+LogLens automatically parses UVM/EDA logs, maps the chronological dependency of the failures, identifies the exact root cause module, and generates a Targeted Reproduction Command. By injecting targeted verbosity flags (e.g., +uvm_set_verbosity), engineers can re-run simulations at full speed and dump waveforms only for the specific module that failed.
 
 ✨ Core Features
 
-📊 Intelligent Log Extraction: Parses raw EDA terminal logs to extract dynamic runtime data, including failing UVM components, SVA assertions, test names, and randomized seeds.
+ Intelligent Log Extraction: Parses raw EDA terminal logs to extract dynamic runtime data, including failing UVM components, SVA assertions, test names, and randomized seeds.
 
-🕸️ Failure Dependency Graph: A custom-built, interactive SVG graph that visually maps the propagation of errors, tracking how a failure in one module (e.g., a physical interface) cascades into downstream components (e.g., monitors and scoreboards).
+ Failure Dependency Graph: A custom-built, interactive SVG graph that visually maps the propagation of errors, tracking how a failure in one module (e.g., a physical interface) cascades into downstream components (e.g., monitors and scoreboards).
 
-🧠 Algorithmic Root Cause Scoring: Replaces guesswork with a mathematical confidence score evaluating Temporal Priority (who failed first), Downstream Reach, Error Severity, and Error Volume to pinpoint the exact root cause module.
+ Algorithmic Root Cause Scoring: Replaces guesswork with a mathematical confidence score evaluating Temporal Priority (who failed first), Downstream Reach, Error Severity, and Error Volume to pinpoint the exact root cause module.
 
-🛠️ Targeted EDA Command Generator: Automatically synthesizes the exact Linux CLI command needed to reproduce the bug for Synopsys VCS, Aldec Riviera-PRO, and Siemens Questa.
+ Targeted EDA Command Generator: Automatically synthesizes the exact Linux CLI command needed to reproduce the bug for Synopsys VCS, Aldec Riviera-PRO, and Siemens Questa.
 
-🛡️ Interactive Verification Engine: An "Engineer-in-the-Loop" UI that allows the user to cross-reference the AI's predicted root cause with the resulting waveform, verify the exact match, and definitively close the debug loop.
+ Interactive Verification Engine: An "Engineer-in-the-Loop" UI that allows the user to cross-reference the AI's predicted root cause with the resulting waveform, verify the exact match, and definitively close the debug loop.
 
 💻 Technology Stack & Architecture
 
-⚛️ React Frontend Architecture
+## React Frontend Architecture:
 
 The frontend is a single-page React application (built with Vite) engineered for high performance and visual clarity. It does not rely on heavy third-party charting libraries; instead, it uses custom, math-driven SVG rendering to ensure the dependency graphs load instantly.
 
@@ -42,7 +42,7 @@ Targeted Command UI: A sleek interface to copy the exact generated simulator com
 
 Styling & Icons: Utilizes highly customized CSS-in-JS for state-driven styling (glowing nodes, active dependency paths) and lucide-react for clean typography and iconography.
 
-⚙️ Backend Technology Stack
+## Backend Technology Stack:
 
 Python 3: Core data parsing and algorithm execution.
 
